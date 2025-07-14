@@ -439,9 +439,10 @@ footer h3{
 }
 
 .category-sorting select {
-    padding: 8px 15px;
+    padding: 7px 14px;
     border-radius: 5px;
     border: 1px solid var(--border-color);
+    font-size: 0.9rem;
 }
 
 .category-articles article {
@@ -472,9 +473,11 @@ footer h3{
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
 .article-description {
+    margin: 15px 0;
     line-height: 1.6;
 }
 
