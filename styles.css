@@ -31,11 +31,25 @@ h2{
 }
 h3 {
     font-size: 1.3rem;
+    color: var(--primary-color);
 }
 
 p,a {
     font-size: 1.1rem;
     color: var(--text-color);
+}
+
+button {
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--button-hover);
+    transition: background-color 0.3s ease;
 }
 
 /* Header Styling */
@@ -126,35 +140,16 @@ header{
     border-radius: 5px;
     width: 200px;
 }
-.search-bar button {
-    padding: 7px 14px;
-    background-color: var(--secondary-color);
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.search-bar input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
 }
-.search-bar button:hover {
-    background-color: var(--button-hover);
-    transition: background-color 0.3s ease;
-}
-
 .auth-buttons {
     display: flex;
     gap: 10px;
 }
 .auth-buttons button {
-    padding: 8px 16px;
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
     font-size: 1rem;
-}
-.auth-buttons button:hover {
-    background-color: var(--button-hover);
-    transition: background-color 0.3s ease;
 }
 
 /* Main Layout Container Styling */
@@ -175,12 +170,11 @@ header{
     border-left: 4px solid #cc0000;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: var(--shadow);
 }
 
 .breaking-news h2 {
-    font-size: 1.5rem;
     color: #cc0000;
     margin-bottom: 20px;
     display: flex;
@@ -200,8 +194,6 @@ header{
 }
 .breaking-news article h3 {
     margin-bottom: 8px;
-    font-size: 1.2rem;
-    color: var(--primary-color);
 }
 
 /* Section Styling */
@@ -211,7 +203,6 @@ header{
 }
 
 .section h2 {
-    font-size: 1.5rem;
     color: var(--primary-color);
     margin-bottom: 25px;
     padding-bottom: 10px;
@@ -248,8 +239,8 @@ header{
 }
 .featured-articles article h3 {
     padding: 20px;
-    font-size: 1.2rem;
     text-align: center;
+    color: var(--text-color);
 }
 
 /* Latest News Styling */
@@ -265,6 +256,7 @@ header{
     margin-bottom: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
+    padding: 15px;
 }
 .latest-news article:hover {
     box-shadow: var(--shadow-hover);
@@ -272,13 +264,17 @@ header{
 .latest-news article img {
     width: 160px;
     height: 120px;
-    /* object-fit: cover; */
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevent image from shrinking */
     background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
 }
 .latest-news article h3 {
     margin-bottom: 8px;
-    font-size: 1.2rem;
-    color: var(--primary-color);
+}
+.latest-news article > div {
+    flex: 1; /* Allow text content to take remaining space */
+    padding: 5px 0;
 }
 
 /* Category-wise News Section Styling */
@@ -303,9 +299,7 @@ header{
 }
 
 .category-grid h3 {
-    color: var(--primary-color);
     margin-bottom: 10px;
-    font-size: 1.2rem;
 }
 
 /* Sidebar Styling */
@@ -314,7 +308,7 @@ header{
     background: white;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: var(--shadow);
     position: sticky;
     top: 160px;
@@ -322,8 +316,6 @@ header{
 }
 
 .sidebar h3 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
@@ -365,6 +357,9 @@ footer {
     display: flex;
     justify-content: space-around;
     gap: 20px;
+}
+footer h3{
+    color: white;
 }
 
 .footer-about {
@@ -412,11 +407,11 @@ footer {
 .footer-social a i {
     margin: 15px;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 .footer-social a i:hover {
     color: var(--accent-color);
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
